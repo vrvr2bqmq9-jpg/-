@@ -1,6 +1,16 @@
 const crypto = require('crypto');
 
 export default async function handler(req, res) {
+  // 如果是空請求，回傳測試訊息
+  if (!req.body || Object.keys(req.body).length === 0) {
+    return res.json({
+      success: false,
+      message: "收到空請求，請透過 webhook.site 轉發",
+      tip: "TradingView → webhook.site → Vercel"
+    });
+  }
+  // ... 其餘程式碼
+}
   // 設定 CORS 允許所有來源
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
