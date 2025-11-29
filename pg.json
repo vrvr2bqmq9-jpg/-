@@ -1,0 +1,13 @@
+{
+  "name": "tradingview-bybit-bridge",
+  "version": "1.0.0",
+  "description": "TradingView 到 Bybit 的 Webhook 橋接器",
+  "scripts": {
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.0",
+    "crypto": "^1.0.1",
+    "node-fetch": "^2.6.7"
+  }
+}
